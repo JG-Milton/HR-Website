@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    background-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 999;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+li a:hover {
+    background-color: azure;
+    cursor: pointer;
+    color: red;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    ul.topnav li {
+        flex-direction: column;
+    }
+}
+
+
+div {
+    height: 500px;
+    /* margin-top: -20px; */
+}
+
+/* SECTION 1  */
+
+.image1 {
+   /* color: blue;
+   background-color: yellow; */
+   margin-top: 50px;
+   /* border: solid 2px blue; */
+   /* background-image: url(image/HR1.jpeg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover; */
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.image1-1 {
+    padding: 20px;
+    /* border: 1px solid black; */
+    margin-top: 0px;
+}
+
+.image1-2 {
+    padding: 20px;
+    /* border: 1px solid black; */
+    margin-top: 0px;
+    
+}
+
+.image1-2 button {
+    padding: 10px;
+    font-size: 10px;
+}
+
+.left-1 {
+    background-image: url(image/HR1.jpeg);
+    margin-top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-1 {
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+}
+
+
+/* SECTION 2 */
+
+.image2 {
+    color: white;
+    /* border: solid 2px white; */
+    background-image: url(image/hold-sign.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    margin: 20px;
+    position: relative;
+}
+
+.image2-1 {
+    position: relative;
+    text-align: center;
+    /* border: solid 2px black; */
+    height: 200px;
+    top: 50%;
+    font-size: large;
+}
+
+.image2-1 p {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+
+
+/* SECTION 3 */
+
+.image3 {
+  background-image: url(image/HR5.jpg);
+  /* border: solid 2px white; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  border-radius: 15%;
+}
+
+.text3 {
+    position: absolute;
+    top: 40%;
+    padding: 20px;
+    text-indent: 30px;
+    color: white;
+    text-shadow: 1px 1px 2px #333;
+    text-align: center;
+    height: 200px;
+    /* border: 2px solid black; */
+    left: 3%;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+
+/* Section 4 */
+
+
+.image4 {
+    color: rgb(26, 238, 26);
+    /* background-color: black; */
+    margin-top: 40px;
+    text-align: center;
+    font-family: "Playwrite CU";
+}
+
+.image4 p:hover {
+    /* border: solid 2px yellow; */
+    font-size: 40px;
+    transition: 4s;
+    animation: fadeOut 2s forwards;
+    font-family: "Playwrite CU";
+}
+
+@keyframes fadeOut {
+    0% {
+        font-size: 20px; /* Initial font size */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        font-size: 30px; /* Bigger font size */
+        opacity: 1; /* Still visible */
+    }
+    100% {
+        font-size: 30px; /* Keep it big */
+        opacity: 0; /* Fade out */
+    }
+}
+
+.image4-1 {
+    /* border: solid 2px yellow; */
+    background-image: url(image/HR6.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px;
+    height: 300px;
+    justify-content: space-around;
+}
+
+/* Section 5 */
+
+.image5 {
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+}
+
+.image5::before {
+    content:'';
+    background-image: url(image/HR4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.image5-1 {
+    position: relative;
+    top: 40%;
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px #333;
+    text-align: center;
+    z-index: 2;
+    animation: scroll 30s linear infinite;
+    padding: 100px;
+    font-size: larger;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    
+    50% {
+        top: 0;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
+
+/* Section 6 */
+
+.image6 {
+    border: solid 2px yellow;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.video-1 {
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+}
